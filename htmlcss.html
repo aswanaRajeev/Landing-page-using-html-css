@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      *{
+        box-sizing: border-box;
+        margin: 0;
+       
+      }
+      html,body{
+        overflow-x: hidden;
+      }
+
+      .topnav {
+        display: flex;
+        width: 100%;
+        height: 800px;
+        margin: 0;
+        background-image: url(banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .nav {
+        position: relative;
+        display: flex;
+        left: 280px;
+        top: 30px;
+        padding: 5px;
+        height: 60px;
+      }
+
+      .nav a,
+      select {
+        position: relative;
+        color: white;
+        padding: 15px 1px;
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        left: 270px;
+        background: none;
+        padding-inline-start: 50px;
+      }
+
+      .nav option {
+        background-color: dodgerblue;
+        text-align: left;
+        padding: 20px;
+        font-size: 20px;
+      }
+
+      .topnavtext {
+        position: absolute;
+        text-align: center;
+        top: 320px;
+        left: 40%;
+        color: white;
+        font-size: x-large;
+        padding: 30px 30px 30px 30px;
+      }
+
+      .div2 {
+        width: 100%;
+        height: 400px;
+
+        background-color: #e9e8e8;
+      }
+
+      .div2 h1 {
+        position: relative;
+        top: 200px;
+        left: 650px;
+      }
+
+      .div2p {
+        position: relative;
+
+        top: 180px;
+        left: 400px;
+        display: flex;
+
+        flex-direction: row;
+      }
+
+      .div2p1 {
+        padding: 50px 80px;
+        font-size: 25px;
+      }
+
+      .div2i {
+        position: absolute;
+        top: 110px;
+        left: 110px;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .div3 {
+        position: absolute;
+        top: 700px;
+        left: 150px;
+        width: 80%;
+        height: 200px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        box-shadow: 5px 10px 18px rgb(175, 174, 174);
+        border-color: white;
+        border-radius: 60px;
+      }
+      .borderline {
+        position: absolute;
+        top: 770px;
+        left: 390px;
+        width: 3px;
+        height: 60px;
+        background-color: #a8a6a6;
+        border-radius: 2px;
+      }
+      .borderline1 {
+        position: absolute;
+        top: 770px;
+        left: 635px;
+        width: 3px;
+        height: 60px;
+        background-color: #a8a6a6;
+        border-radius: 2px;
+      }
+      .blue {
+        position: absolute;
+        top: 670px;
+        left: 880px;
+        width: 250px;
+        height: 250px;
+        background-color: dodgerblue;
+        border-radius: 20px;
+        padding: 60px;
+        text-align: center;
+        color: white;
+      }
+
+      .div3item {
+        background-color: white;
+        padding: 40px;
+
+        text-align: center;
+        width: 243px;
+      }
+
+      .div4 {
+        position: relative;
+        width: 85%;
+        height: 500px;
+
+        left: 100px;
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      .div4img {
+        position: relative;
+        width: 600px;
+        height: 470px;
+
+        top: 10px;
+        left: 5px;
+      }
+
+      .div4img1 {
+        position: relative;
+        top: 120px;
+        left: 150px;
+      }
+
+      .div4img2 {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+      }
+
+      .div4img3 {
+        position: absolute;
+        top: 20px;
+        left: 90px;
+      }
+
+      .div4text {
+        position: absolute;
+        width: 600px;
+        height: 470px;
+
+        top: 10px;
+        left: 650px;
+      }
+
+      .div4text p {
+        position: relative;
+        top: 50px;
+        text-align: justify;
+        font-size: x-large;
+        line-height: 30px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .div5 {
+        position: relative;
+        width: 85%;
+        height: 500px;
+
+        left: 100px;
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      .div51 {
+        position: relative;
+        width: 85%;
+        height: 380px;
+
+        top: 100px;
+        line-break: 20px;
+        padding: 20px 20px;
+      }
+
+      .div51 p {
+        line-height: 25px;
+      }
+
+      .div6 {
+        width: 100%;
+        height: 700px;
+        background-color: #031f53;
+      }
+
+      .div6main {
+        position: relative;
+        width: 85%;
+
+        left: 100px;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+
+      .div1col {
+        position: relative;
+        font-size: 30px;
+        line-height: 40px;
+        padding: 30px;
+      }
+
+      .div6first {
+        background-color: #031f53;
+
+        color: white;
+        padding: 30px;
+        width: 430px;
+      }
+
+      .div7 {
+        position: relative;
+        width: 85%;
+
+        left: 100px;
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+
+      .div7main {
+        padding: 30px;
+        width: 430px;
+        line-height: 38px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      footer {
+        height: 50px;
+        background-color: rgb(60, 57, 57);
+        color: white;
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+        padding: 15px;
+        position: sticky;
+      }
+
+      @media screen and (max-width: 700px) {
+        .div2,
+        .div4,
+        .div5,
+        .div6,
+        .div8,
+        .nav,
+        .topnav {
+          display: flex;
+          flex-direction: row;
+        }
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/e43abded08.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="topnav">
+      <div class="nav">
+        <img src="logo.png" alt="" class="navimg" />
+        <a href="" class="navbar">Home</a>
+        <a href="" class="navbar">About Us</a>
+
+        <select name="Services" id="Services" class="navbar">
+          <div class="opt">
+            <option>Services</option>
+            <option>Architecture</option>
+            <option>Interiors</option>
+            <option>Landscapes</option>
+            <option>Renovation</option>
+            <option>Project Management</option>
+          </div>
+        </select>
+        <a href="" class="navbar">Works</a>
+        <a href="" class="navbar">Contact Us</a>
+      </div>
+      <div class="topnavtext">
+        <h1>
+          <span style="color: dodgerblue; padding: 30px">AROUND</span> <br />
+          THE WORLD
+        </h1>
+      </div>
+    </div>
+    <div class="div2">
+      <h1>Why Choose Us?</h1>
+      <div class="div2p">
+        <div class="div2p1">
+          <p>Services</p>
+        </div>
+        <div class="div2p1">
+          <p>Services</p>
+        </div>
+        <div class="div2p1">
+          <p>Services</p>
+        </div>
+        <div class="div2i">
+          <i class="fa-regular fa-circle fa-sm" style="color: #7f7c7c"></i>
+          <div
+            style="width: 230px; height: 2px; background-color: #7f7c7c"
+          ></div>
+          <i class="fa-regular fa-circle-dot fa-xl" style="color: #265cc1"></i>
+          <div
+            style="width: 230px; height: 2px; background-color: #7f7c7c"
+          ></div>
+          <i class="fa-regular fa-circle fa-sm" style="color: #7f7c7c"></i>
+        </div>
+      </div>
+    </div>
+    <div class="div3">
+      <div class="div3item">
+        <img src="key.png" /><br />
+        <h3>Service Title</h3>
+        <p>Description</p>
+      </div>
+
+      <div class="div3item">
+        <img src="add.png" /><br />
+        <h3>Service Title</h3>
+        <p>Description</p>
+      </div>
+      <div class="div3item">
+        <img src="shield (1).png" /><br />
+        <h3>Service Title</h3>
+        <p>Description</p>
+      </div>
+      <div class="div3item"></div>
+      <div class="div3item">
+        <img src="password (2).png" /><br />
+        <h3>Service Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="blue">
+      <img src="browser-(1).png" /><br />
+      <h3>Service Title</h3>
+      <p>Description</p>
+      <br />
+      <i
+        class="fa-solid fa-circle-chevron-right fa-2xl"
+        style="color: #fefeff"
+      ></i>
+    </div>
+    <div class="borderline"></div>
+    <div class="borderline1"></div>
+    <div class="div4">
+      <div class="div4img">
+        <div class="div4img1"><img src="srv1.png" /></div>
+        <div class="div4img2"><img src="srv3.png" /></div>
+        <div class="div4img3"><img src="srv2.png" /></div>
+      </div>
+      <div class="div4text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean enim
+          nisl, venenatis sit amet viverra luctus, fermentum et elit. Sed congue
+          ex a tincidunt pretium. Pellentesque nec sollicitudin sem. Donec sed
+          gravida dui. Aliquam erat volutpat. Etiam sed est tristique, elementum
+          sapien at, posuere dolor. <br /><br />
+          Maecenas egestas nisi et efficitur vestibulum. Aliquam non diam
+          bibendum, mattis lacus sit amet, lobortis ipsum. Donec maximus
+          lobortis diam quis pharetra. Aliquam accumsan arcu eget tempus
+          dignissim. In eu volutpat nisi. Duis sit amet ornare velit. Ut quis
+          turpis et arcu rutrum euismod pulvinar non orci. Mauris molestie et
+          sapien et ultricies.
+        </p>
+      </div>
+    </div>
+    <div class="div5">
+      <div class="div51">
+        <h1>
+          Fright Company<br />With a<span style="color: #265cc1"
+            >Difference.</span
+          ><br />Fright Company <br />Innovation.
+        </h1>
+        <br />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean enim
+          nisl, venenatis sit amet viverra luctus, fermentum et elit. Sed congue
+          ex a tincidunt pretium. Pellentesque nec sollicitudin sem.
+        </p>
+        <br />
+        <p>Read More</p>
+      </div>
+      <div class="div51">
+        <img src="2.png" style="border-radius: 20px" /><br /><br />
+        <h1>What is Lorem ipsum?</h1>
+        <br />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+          quae officia provident quod pariatur autem eligendi quaerat ad saepe
+          maiores?
+        </p>
+        <br /><i
+          class="fa-solid fa-circle-chevron-right fa-2xl"
+          style="color: #265cc1"
+        ></i>
+      </div>
+      <div class="div51">
+        <img src="1.png" style="border-radius: 20px" /><br /><br />
+        <h1>What is Lorem ipsum?</h1>
+        <br />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+          quae officia provident quod pariatur autem eligendi quaerat ad saepe
+          maiores?
+        </p>
+        <br /><i
+          class="fa-solid fa-circle-chevron-right fa-2xl"
+          style="color: #265cc1"
+        ></i>
+      </div>
+    </div>
+    <div class="div6">
+      <div class="div6main">
+        <div class="div6first div1col">
+          <h4>
+            Unmatched <br />
+            Services
+          </h4>
+          <p>
+            Unmatched <br />
+            Excellence.
+          </p>
+        </div>
+        <div class="div6first">
+          <fieldset style="width: 350px">
+            <legend>
+              <img
+                src="password (2).png"
+                width="70px"
+                height="70px"
+                style="padding: 10px"
+              />
+            </legend>
+            <h1>What is Lorem ipsum?</h1>
+            <br />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Delectus, quae officia provident quod pariatur
+            </p>
+          </fieldset>
+        </div>
+        <div class="div6first">
+          <fieldset style="width: 350px">
+            <legend>
+              <img
+                src="password (2).png"
+                width="70px"
+                height="70px"
+                style="padding: 10px"
+              />
+            </legend>
+            <h1>What is Lorem ipsum?</h1>
+            <br />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Delectus, quae officia provident quod pariatur
+            </p>
+          </fieldset>
+        </div>
+        <div class="div6first">
+          <fieldset style="width: 350px">
+            <legend>
+              <img
+                src="password (2).png"
+                width="70px"
+                height="70px"
+                style="padding: 10px"
+              />
+            </legend>
+            <h1>What is Lorem ipsum?</h1>
+            <br />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Delectus, quae officia provident quod pariatur
+            </p>
+          </fieldset>
+        </div>
+        <div class="div6first">
+          <fieldset style="width: 350px">
+            <legend>
+              <img
+                src="password (2).png"
+                width="70px"
+                height="70px"
+                style="padding: 10px"
+              />
+            </legend>
+            <h1>What is Lorem ipsum?</h1>
+            <br />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Delectus, quae officia provident quod pariatur
+            </p>
+          </fieldset>
+        </div>
+        <div class="div6first">
+          <fieldset style="width: 350px">
+            <legend>
+              <img
+                src="password (2).png"
+                width="70px"
+                height="70px"
+                style="padding: 10px"
+              />
+            </legend>
+            <h1>What is Lorem ipsum?</h1>
+            <br />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Delectus, quae officia provident quod pariatur
+            </p>
+          </fieldset>
+        </div>
+      </div>
+      <img
+        src="world-wide-web icon.png"
+        height="200px"
+        width="200px"
+        style="right: 5px; position: absolute"
+      />
+    </div>
+    <div class="div7">
+      <div class="div7main">
+        <h2>Services</h2>
+        <p>
+          Website Services <br />
+          Mobile application Services <br />Branding <br />
+          Networking and CCTV <br />
+          Services
+        </p>
+      </div>
+      <div class="div7main">
+        <h2>Product</h2>
+        <p>
+          ERP Solution <br />
+          POS Solution <br />School Management <br />
+          Custom softwares
+        </p>
+      </div>
+      <div class="div7main">
+        <h2>Follow Us</h2>
+        <br />
+        <img src="fb.png" />
+        <img src="insta.png" />&nbsp;&nbsp;
+        <img src="twitter.png" />
+        <p>monero@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer">
+      <footer>
+        <p>&copy; 2020 All rights Reserved.</p>
+        <p>Terms of use | Privacy Policy</p>
+      </footer>
+    </div>
+
+    <p></p>
+  </body>
+</html>
